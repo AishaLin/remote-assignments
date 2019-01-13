@@ -1,0 +1,147 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+  min-height: 100vh;
+}
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2 {
+	color: #093a58;
+	margin-top: 0;
+}
+
+h3 {
+	color: #fff;
+	margin-top: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.title {
+	font-size: 1.35em;
+  margin-left: 20px;
+}
+.main-title {
+  display: flex;
+}
+.main-nav {
+	margin-top: 10px;
+  margin-right: 2%;
+  display: none;
+}
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 10px;
+}
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+.main-nav a:hover {
+	color: firebrick;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgrey;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+.banner,
+.section-title,
+.main-footer {
+	text-align: center;
+}
+.banner {
+	color: #fff;
+	background: #3acec2;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
+}
+.box {
+  text-align: center;
+  background-color: grey;
+  margin: 1em;
+  min-height: 200px;
+}
+.main-footer {
+	background: #d9e4ea;
+	padding: 1em 0;
+  width: 200px;
+  margin-top: 50px;
+  margin: auto;
+}
+.logo {
+  margin: -45px 7px;
+	width: 35px;
+}
+.menu {
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  position: absolute;
+  right: 20px;
+}
+.headline {
+	margin-bottom: 0;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 501px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 40%;
+    height: 20%;
+  }
+}
+@media (min-width: 801px) {
+  .main-nav {
+    display: inherit;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media (min-width: 1201px) {
+  .content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
