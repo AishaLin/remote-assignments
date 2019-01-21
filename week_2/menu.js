@@ -49,16 +49,30 @@ console.log(max(5, 2, 7, 1, 6));
   Assignment 2: Object
 ============================================= */
 //way1
-var args = {
-  op: '',
-  n1: 3,
-  n2: 9
+function calculate(args){ let result;
+if(args.op==="+"){ result=args.n1+args.n2;
+}else if(args.op==="-"){ result=args.n1-args.n2;
+}else{
+result="Not supported";
+}
+return result;
+}
+class args {
+  constructor(op, n1, n2) {
+    this.op = op;
+    this.n1 = n1;
+    this.n2 = n2;
+  }
 };
+const way1 = new args('-', 3, 4);
+console.log(calculate(way1));
+
 //way2
-var op = '',
+var op = '+',
     n1 = 3,
     n2 = 9;
-var args = {op, n1, n2};
+var way2 = {op, n1, n2};
+console.log(calculate(way2));
 
 /* ==========================================
   Assignment 3: Function, Array, and Object
