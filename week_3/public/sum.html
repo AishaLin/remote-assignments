@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment</title>
+  </head>
+  <body>
+    <input type="text">
+    <button type="submit" name="button" onclick="getSum()">計算</button>
+    <p class = "showAns" ></p>
+    <script>
+      function getSum(){
+        let xhr = new XMLHttpRequest();
+        let reqNum = document.querySelector('input').value;
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState === 4){
+            document.querySelector('.showAns').innerHTML = `The Answer is: ${xhr.responseText}`;
+          }
+        };
+        xhr.open('GET',`http://localhost:3000/getData?number=${reqNum}`);
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
