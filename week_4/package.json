@@ -2,6 +2,7 @@
   "name": "week_4_new",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aishalin.github.io/remote-assignments/week_4/",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
