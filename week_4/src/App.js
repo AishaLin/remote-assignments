@@ -114,7 +114,7 @@ function ajax(src, callback){
       for(let i = 0; i < 3; i += 1){
         productInformation += `<li>name : ${products[i].name}</li>`;
         productInformation += `<li>price : ${products[i].price}</li>`;
-        productInformation += `<li>description : ${products[i].description}`</li>;
+        productInformation += `<li>description : ${products[i].description}</li>`;
       callback(productInformation);
       }
     }
